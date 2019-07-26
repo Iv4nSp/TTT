@@ -5,27 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TicTacToe"
         mc:Ignorable="d"
-        Title="MainWindow" Height="300" Width="300">
+        Title="MainWindow" Height="400" Width="300">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="97*"/>
+            <ColumnDefinition Width="98*" />
+            <ColumnDefinition Width="97*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
-        <Button Click="Button_Click_00" FontSize="50"></Button>
-        <Button Grid.Column="1" Click="Button_Click_01" FontSize="50"></Button>
-        <Button Grid.Column="2" Click="Button_Click_02" FontSize="50"></Button>
-        <Button Grid.Row="1" Click="Button_Click_10" FontSize="50"></Button>
-        <Button Grid.Column="1" Grid.Row="1" Click="Button_Click_11" FontSize="50"></Button>
-        <Button Grid.Column="2" Grid.Row="1" Click="Button_Click_12" FontSize="50"></Button>
-        <Button Grid.Row="2" Click="Button_Click_20" FontSize="50"></Button>
-        <Button Grid.Column="1" Grid.Row="2" Click="Button_Click_21" FontSize="50"></Button>
-        <Button Grid.Column="2" Grid.Row="2" Click="Button_Click_22" FontSize="50"></Button>
-        
+        <Button Grid.Row="1" FontSize="50" Command="{Binding ButtonClickCommand}" CommandParameter="0" Content="{Binding Button00}"></Button>
+        <Button Grid.Column="1" Grid.Row="1" FontSize="50" Command="{Binding ButtonClickCommand}" CommandParameter="1" Content="{Binding Button01}"/>
+        <Button Grid.Column="5" Grid.Row="1" FontSize="50" Command="{Binding ButtonClickCommand}" CommandParameter="2" Content="{Binding Button02}"></Button>
+        <Button Grid.Row="2"  FontSize="50"  Command="{Binding ButtonClickCommand}" CommandParameter="3" Content="{Binding Button10}"></Button>
+        <Button Grid.Column="1" Grid.Row="2"  FontSize="50" Command="{Binding ButtonClickCommand}" CommandParameter="4" Content="{Binding Button11}"></Button>
+        <Button Grid.Column="5" Grid.Row="2"  FontSize="50" Command="{Binding ButtonClickCommand}" CommandParameter="5" Content="{Binding Button12}"></Button>
+        <Button Grid.Row="3" FontSize="50" Command="{Binding ButtonClickCommand}" CommandParameter="6" Content="{Binding Button20}"></Button>
+        <Button Grid.Column="1" Grid.Row="3"  FontSize="50" Command="{Binding ButtonClickCommand}" CommandParameter="7" Content="{Binding Button21}"></Button>
+        <Button Grid.Column="5" Grid.Row="3"  FontSize="50" Command="{Binding ButtonClickCommand}" CommandParameter="8" Content="{Binding Button22}"></Button>
+        <Label x:Name="playerLabel" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Center" Height="50" Margin="35,21,10,21" VerticalAlignment="Center" Width="150" FontSize="20" Content="{Binding NextPlayer}" FontWeight="Bold" RenderTransformOrigin="0.553,0.34"/>
+        <Button Grid.ColumnSpan="4" Content="Nova igra" Command="{Binding ButtonNewGame}" HorizontalAlignment="Left" Height="50" Margin="10,21,0,21" VerticalAlignment="Center" Width="80"/>
+
     </Grid>
 </Window>

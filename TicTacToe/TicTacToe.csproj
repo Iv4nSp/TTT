@@ -63,6 +63,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Player.cs" />
+    <Compile Include="GameStatus.cs" />
+    <Compile Include="CommandHander.cs" />
+    <Compile Include="GameViewModel.cs" />
     <Compile Include="damir\KrizicKruzic.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
